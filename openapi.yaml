@@ -1,23 +1,26 @@
 openapi: 3.0.4
 info:
   title: Parts Of Speech
-  description: Parts Of Speech is a simple tool for extracting nouns, verbs, adjectives, adverbs, etc. from text. It returns the extracted words based on the part of speech specified.
+  description: >-
+    Parts Of Speech is a simple tool for extracting nouns, verbs, adjectives,
+    adverbs, etc. from text. It returns the extracted words based on the part of
+    speech specified.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/partsofspeech:
     post:
       summary: Extract Words
-      description: Parts Of Speech is a simple tool for extracting nouns, verbs, adjectives, adverbs, etc. from text. It returns the extracted words based on the part of speech specified.
+      description: Extract nouns, verbs, adjectives, adverbs, etc. from text
       operationId: partsofspeech
       parameters: []
       responses:
@@ -35,27 +38,27 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   partofspeech: verbs
                   result:
-                  - located
-                  - had
-                  - visit
-                  - packed up
-                  - boarded
-                  - bound
+                    - located
+                    - had
+                    - visit
+                    - packed up
+                    - boarded
+                    - bound
                   count: 6
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -66,18 +69,12 @@ paths:
                 text:
                   type: string
                   description: The text to extract words from
-                  example: My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village
                 partofspeech:
                   type: string
-                  description: The part of speech to extract (nouns, verbs, adjectives, adverbs, etc.)
-                  default: nouns
-                  example: verbs
+                  description: The part of speech to extract
               required:
-              - text
-              - partofspeech
-              example:
-                text: My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village
-                partofspeech: verbs
+                - text
+                - partofspeech
 components:
   securitySchemes:
     api_key:
@@ -85,4 +82,11 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  text: >-
+    My friend from college hails from a small countryside village located at the
+    heart of the state. During the last summer vacation, I had an opportunity to
+    visit my friend in his village. I packed up my belongings and boarded the
+    bus bound for the village
+  partofspeech: verbs
