@@ -9,23 +9,15 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/partsofspeech';
 
 /**
- * Make a POST request to the Parts Of Speech API
+ * Make a GET request to the Parts Of Speech API
  */
 async function callPartsOfSpeechAPI() {
   try {
-    // Request body
-    const requestBody &#x3D; {
-    &quot;text&quot;: &quot;My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village&quot;,
-    &quot;partofspeech&quot;: &quot;verbs&quot;
-};
-
     const response = await fetch(API_URL, {
-      method: 'POST',
+      method: 'GET',
       headers: {
-        'x-api-key': API_KEY,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(requestBody)
+        'x-api-key': API_KEY
+      }
     });
 
     // Check if response is successful
