@@ -14,21 +14,14 @@ API_URL = 'https://api.apiverve.com/v1/partsofspeech'
 
 def call_partsofspeech_api():
     """
-    Make a POST request to the Parts Of Speech API
+    Make a GET request to the Parts Of Speech API
     """
     try:
-        # Request body
-        request_body &#x3D; {
-    &#x27;text&#x27;: &#x27;My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village&#x27;,
-    &#x27;partofspeech&#x27;: &#x27;verbs&#x27;
-}
-
         headers = {
-            'x-api-key': API_KEY,
-            'Content-Type': 'application/json'
+            'x-api-key': API_KEY
         }
 
-        response = requests.post(API_URL, headers=headers, json=request_body)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
