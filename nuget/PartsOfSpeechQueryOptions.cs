@@ -17,7 +17,7 @@ namespace APIVerve.API.PartsOfSpeech
         public string Text { get; set; }
 
         /// <summary>
-        /// The part of speech to extract (nouns, verbs, adjectives, adverbs, etc.)
+        /// The part of speech to extract
         /// </summary>
         [JsonProperty("partofspeech")]
         public string Partofspeech { get; set; }
