@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_partsofspeech',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='Parts Of Speech is a simple tool for extracting nouns, verbs, adjectives, adverbs, etc. from text. It returns the extracted words based on the part of speech specified.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/partsofspeech',
-        'Source': 'https://github.com/apiverve/partsofspeech-api',
-        'Bug Tracker': 'https://github.com/apiverve/partsofspeech-api/issues'
-    },
+    url='https://apiverve.com/marketplace/partsofspeech?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
