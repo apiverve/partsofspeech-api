@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:partsofspeech-api:1.1.13'
+    implementation 'com.github.apiverve:partsofspeech-api:1.1.14'
 }
 ```
 
@@ -47,8 +47,8 @@ PartsOfSpeechAPIClient client = new PartsOfSpeechAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "");
-    parameters.put("partofspeech", "nouns");
+    parameters.put("text", "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village");
+    parameters.put("partofspeech", "verbs");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
