@@ -44,7 +44,10 @@ from apiverve_partsofspeech.apiClient import PartsofspeechAPIClient
 # Initialize the client with your APIVerve API key
 api = PartsofspeechAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village", "partofspeech": "verbs" }
+query = {
+    "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village",
+    "partofspeech": "verbs"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village", "partofspeech": "verbs" }
+query = {
+    "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village",
+    "partofspeech": "verbs"
+}
 ```
 
 ###### Simple Request
@@ -129,7 +135,10 @@ from apiverve_partsofspeech.apiClient import PartsofspeechAPIClient, Partsofspee
 
 api = PartsofspeechAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village", "partofspeech": "verbs" }
+query = {
+    "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village",
+    "partofspeech": "verbs"
+}
 
 try:
     result = api.execute(query)
@@ -150,7 +159,10 @@ from apiverve_partsofspeech.apiClient import PartsofspeechAPIClient, Partsofspee
 
 api = PartsofspeechAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village", "partofspeech": "verbs" }
+query = {
+    "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village",
+    "partofspeech": "verbs"
+}
 
 try:
     result = api.execute(query)
@@ -184,7 +196,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_partsofspeech.apiClient import PartsofspeechAPIClient, PartsofspeechAPIClientError
 
-query = { "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village", "partofspeech": "verbs" }
+query = {
+    "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village",
+    "partofspeech": "verbs"
+}
 
 # Using context manager ensures proper cleanup
 with PartsofspeechAPIClient("[YOUR_API_KEY]") as api:
@@ -210,7 +225,10 @@ from apiverve_partsofspeech.apiClient import PartsofspeechAPIClient
 # Enable debug mode
 api = PartsofspeechAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village", "partofspeech": "verbs" }
+query = {
+    "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village",
+    "partofspeech": "verbs"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -225,8 +243,12 @@ from apiverve_partsofspeech.apiClient import PartsofspeechAPIClient
 
 api = PartsofspeechAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village",
+    "partofspeech": "verbs"
+}
+
 try:
-    query = { "text": "My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village", "partofspeech": "verbs" }
     result = api.execute(query)
     print(result)
 finally:
