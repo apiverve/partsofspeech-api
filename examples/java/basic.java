@@ -12,8 +12,13 @@ public class BasicExample {
         PartsOfSpeechAPIClient client = new PartsOfSpeechAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Request body
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;text&quot;, &quot;My friend from college hails from a small countryside village located at the heart of the state. During the last summer vacation, I had an opportunity to visit my friend in his village. I packed up my belongings and boarded the bus bound for the village&quot;);
+        parameters.put(&quot;partofspeech&quot;, &quot;verbs&quot;);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
