@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: Parts Of Speech
   description: >-
-    Parts Of Speech is a simple tool for extracting nouns, verbs, adjectives,
-    adverbs, etc. from text. It returns the extracted words based on the part of
-    speech specified.
+    Parts Of Speech extracts words from text based on grammatical categories
+    like nouns, verbs, and adjectives. Pass any text passage and a category to
+    receive an array of matching words.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/partsofspeech:
     post:
-      summary: Extract Words
+      summary: Parts Of Speech
       description: Extract nouns, verbs, adjectives, adverbs, etc. from text
       operationId: partsofspeech
       parameters: []
@@ -71,10 +71,9 @@ paths:
                   description: The text to extract words from
                 partofspeech:
                   type: string
-                  description: The part of speech to extract
+                  description: The part of speech to extract. Defaults to nouns
               required:
                 - text
-                - partofspeech
 components:
   securitySchemes:
     api_key:
