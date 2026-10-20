@@ -30,7 +30,7 @@ class partsofspeechWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/partsofspeech';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"text":{"type":"string","required":true},"partofspeech":{"type":"string","required":true,"default":"nouns"}};
+        this.validationRules = {"text":{"type":"string","required":true},"partofspeech":{"type":"string","required":false,"default":"nouns"}};
     }
 
     /**
