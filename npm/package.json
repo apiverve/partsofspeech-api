@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/partsofspeech",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Parts Of Speech extracts words from text based on grammatical categories like nouns, verbs, and adjectives. Pass any text passage and a category to receive an array of matching words.",
   "main": "index.js",
   "types": "index.d.ts",
